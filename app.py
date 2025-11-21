@@ -1,3 +1,17 @@
+# ------------------------------------------------------------------------------ #
+    # GitHub Deployment Instructions
+    # First, create a new repository on GitHub named `movie-review-deploy`.
+    # git init
+    # git add .
+    # git commit -m "Initial commit"
+    # git branch -M main
+    # git remote add origin https://github.com/yourusername/movie-review-deploy.git
+    # git push -u origin main
+    # My app in streamlit: jm-movie-sentiment-app.streamlit.app
+    # Straemllit link: https://movie-review-deploy.streamlit.app/
+    # ------------------------------------------------------------------------------ #
+
+
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Force CPU only
 
@@ -66,7 +80,8 @@ def preprocess_text(text):
 # ---------------------------
 st.set_page_config(page_title="Movie Sentiment Analyzer")
 
-st.title("🎬 Movie Review Sentiment Analyzer")
+# st.title("🎬 Movie Review Sentiment Analyzer")
+st.header("🎬 Movie Review Sentiment Analyzer")
 st.write("Enter a movie review below and the model will predict whether it's **positive** or **negative**.")
 
 
@@ -106,15 +121,5 @@ if st.button("Predict Sentiment"):
             """,
             unsafe_allow_html=True
         )
-'''
-    # -------------------------------- #
-    # 7. GitHub Deployment Instructions
-    # -------------------------------- #
-    First, create a new repository on GitHub named `movie-review-deploy`.
-    git init
-    git add .
-    git commit -m "Initial commit"
-    git branch -M main
-    git remote add origin https://github.com/yourusername/movie-review-deploy.git
-    git push -u origin main
-'''
+
+    
